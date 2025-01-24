@@ -45,8 +45,9 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
-	<key>NSPhoneUsageDescription</key>
-    <string>We need phone access to check call status.</string>
-
+	<key>NSPhoneNumberUsageDescription</key>
+	<string>We need access to your phone state to detect calls.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>We need access to check your phone's call state.</string>
 </dict>
 </plist>

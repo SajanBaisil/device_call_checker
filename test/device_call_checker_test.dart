@@ -7,13 +7,13 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 class MockDeviceCallCheckerPlatform
     with MockPlatformInterfaceMixin
     implements DeviceCallCheckerPlatform {
-
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
 }
 
 void main() {
-  final DeviceCallCheckerPlatform initialPlatform = DeviceCallCheckerPlatform.instance;
+  final DeviceCallCheckerPlatform initialPlatform =
+      DeviceCallCheckerPlatform.instance;
 
   test('$MethodChannelDeviceCallChecker is the default instance', () {
     expect(initialPlatform, isInstanceOf<MethodChannelDeviceCallChecker>());
@@ -21,7 +21,8 @@ void main() {
 
   test('getPlatformVersion', () async {
     DeviceCallChecker deviceCallCheckerPlugin = DeviceCallChecker();
-    MockDeviceCallCheckerPlatform fakePlatform = MockDeviceCallCheckerPlatform();
+    MockDeviceCallCheckerPlatform fakePlatform =
+        MockDeviceCallCheckerPlatform();
     DeviceCallCheckerPlatform.instance = fakePlatform;
 
     // expect(await deviceCallCheckerPlugin.getPlatformVersion(), '42');

@@ -1,18 +1,50 @@
-# device_call_checker
+# Device Call Checker
 
-A new Flutter plugin project.
+## Overview
 
-## Getting Started
+Device Call Checker is a tool designed to monitor and verify device calls within your system. It ensures that all device interactions are logged and validated for accuracy and reliability.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/to/develop-plugins),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Real-time Monitoring**: Continuously monitors device calls in real-time.
+- **Logging**: Keeps a detailed log of all device interactions.
+- **Validation**: Verifies the accuracy of each device call.
+- **Alerts**: Sends notifications for any anomalies detected.
 
-The plugin project was generated without specifying the `--platforms` flag, no platforms are currently supported.
-To add platforms, run `flutter create -t plugin --platforms <platforms> .` in this directory.
-You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/to/pubspec-plugin-platforms.
+## Installation
+To install Device Call Checker, follow these steps:
+
+1. With Flutter :
+    ```bash
+    $ flutter pub add device_call_checker
+    ```
+
+## Usage
+
+To start using Device Call Checker in your Flutter project, follow these steps:
+
+1. Import the package in your Dart file:
+    ```dart
+    import 'package:device_call_checker/device_call_checker.dart';
+    ```
+
+2. Use the Device Call Checker to monitor device calls:
+    ```dart
+    Future<bool> someFunction() async{
+    return await DeviceCallChecker.isDeviceInCall();
+    }
+    ```
+
+For more detailed usage and examples, please refer to the official documentation.
+
+## Contributing
+
+We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING.md) for more details.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or feedback, please reach out to us at [sajanbaisil12@gmail.com](mailto:sajanbaisil12@gmail.com).
