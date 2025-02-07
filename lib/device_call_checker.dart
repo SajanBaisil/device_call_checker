@@ -7,8 +7,8 @@ class DeviceCallChecker {
 
   static Future<bool> isDeviceInCall() async {
     try {
-      final bool isInCall = await _channel.invokeMethod('isDeviceInCall');
-      return isInCall;
+      final bool? isInCall = await _channel.invokeMethod('isDeviceInCall');
+      return isInCall ?? false;
     } on PlatformException catch (e) {
       // Handle errors, such as missing permissions
       print("Error: ${e.message}");

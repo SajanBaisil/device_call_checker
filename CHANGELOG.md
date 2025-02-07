@@ -1,3 +1,6 @@
+## 0.0.9
+- Minor improvements
+
 ## 0.0.8
 - Added CI/CD 
 - Added GitHub Actions
