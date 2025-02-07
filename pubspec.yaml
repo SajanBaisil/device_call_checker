@@ -1,6 +1,6 @@
 name: device_call_checker
 description: A Flutter plugin to check if the device is in a call (normal or VoIP call).
-version: 0.0.9
+version: 0.1.0
 homepage: https://pub.dev/packages/device_call_checker
 repository: https://github.com/SajanBaisil/device_call_checker
 issues: https://github.com/SajanBaisil/device_call_checker/issues
