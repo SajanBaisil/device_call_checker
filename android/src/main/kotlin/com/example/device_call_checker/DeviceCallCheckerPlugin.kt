@@ -1,4 +1,3 @@
-
 // Package declaration
 package com.example.device_call_checker
 
@@ -85,12 +84,12 @@ class DeviceCallCheckerPlugin : FlutterPlugin, MethodChannel.MethodCallHandler, 
    * @param call MethodCall instance
    * @param result MethodChannel.Result instance
    */
-override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
+  override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
     when (call.method) {
-        "isDeviceInCall" -> result.success(isDeviceInCall())
-        else -> result.notImplemented()
+      "isDeviceInCall" -> result.success(isDeviceInCall())
+      else -> result.notImplemented()
     }
-}
+  }
 
   /**
    * Checks if the app has the necessary permission.
@@ -123,14 +122,15 @@ override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
    * Checks if the device is currently in a call.
    * @return Boolean indicating if the device is in a call
    */
-private fun isDeviceInCall(): Boolean {
+  private fun isDeviceInCall(): Boolean {
     return try {
-        val telephonyManager =
-            context.getSystemService(Context.TELEPHONY_SERVICE) as? TelephonyManager
-        telephonyManager?.callState != TelephonyManager.CALL_STATE_IDLE
+      val telephonyManager =
+        context.getSystemService(Context.TELEPHONY_SERVICE) as? TelephonyManager
+      telephonyManager?.let {
+        it.callState != TelephonyManager.CALL_STATE_IDLE
+      } ?: false
     } catch (e: Exception) {
-        false
+      false
     }
+  }
 }
-}
-
