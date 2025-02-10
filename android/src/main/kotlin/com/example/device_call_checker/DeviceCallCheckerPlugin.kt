@@ -84,6 +84,7 @@ class DeviceCallCheckerPlugin : FlutterPlugin, MethodChannel.MethodCallHandler, 
    * Handles method calls from Flutter.
    * @param call MethodCall instance
    * @param result MethodChannel.Result instance
+   */
   override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
     when (call.method) {
       "isDeviceInCall" -> {
